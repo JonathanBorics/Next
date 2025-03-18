@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>AI u praksi: GPT-4, Copilot i drugi alati</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/themify-icons.css" rel="stylesheet">
+  <link href='css/dosis-font.css' rel='stylesheet' type='text/css'>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+	  
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="../css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../css/responsive.css" rel="stylesheet" />
+  
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1631389520779149');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1631389520779149&ev=PageView&noscript=1"
+    /></noscript>
+  <!-- End Meta Pixel Code -->
+
+</head>
+
+<header class="header_section">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg custom_nav-container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/transparent_logo_small.png" alt="" style="filter: brightness(0) invert(1);" />
+        <span>
+          MALI Labs
+        </span>
+  
+      </a>
+      <span class="message">
+        Unlocking the Power of Code and AI
+      </span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../work.html">Work </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contact.html"> Contact </a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" href="#"> Courses </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="custom_menu-btn ">
+          <button>
+            <span class=" s-1"></span>
+            <span class="s-2"></span>
+            <span class="s-3"></span>
+          </button>
+        </div>
+      </div>
+
+    </nav>
+  </div>
+
+</header>
+
+    <body id="page-top" data-spy="scroll" data-target=".side-menu">
+      <section class="hero-header">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="display: flex; justify-content: space-between;">
+                <div style="flex: 2;">
+                    <h1 style="font-size: 3em; margin-bottom: 0.5em;">AI u praksi: GPT-4, Copilot i drugi alati</h1>
+                    <h4>Naučite kako da koristite najnovije AI tehnologije u svom svakodnevnom radu!</h4>
+                    
+                    <div style="margin: 2em 0;">
+                        <p>✓ 6 živih onlajn sesija</p>
+                        <p>✓ Personalizovani feedback</p>
+                        <p>✓ Praktična obuka</p>
+                    </div>
+                    
+                    <a href="#registracija" class="meetup-btn">Registruj se</a>
+
+                    <div style="margin: 2em 0; padding-right: 15px">
+                      <p>Registrujte se sada da biste pristupili besplatnom obrazovnom materijalu i ostvarite popust za ceo materijal!</p>
+                    </div>
+                  </div>
+                
+                <div style="flex: 1; flex-direction: column; display: flex;">
+                <div class="hidden-xs">
+                  <img src="img/rocket.png" class="rocket animated bounce">
+                </div>
+                <br>
+                <div class="timer-container">
+                  <h4 id="headline" style="margin: 0.5em;">Preostalo od specijalne ponude:</h3>
+                  <div id="countdown">
+                  <ul>
+                  <li><span id="days"></span>Dani</li>
+                  <li><span id="hours"></span>Sati</li>
+                  <li><span id="minutes"></span>Minuti</li>
+                  <li><span id="seconds"></span>Sekundi</li>
+                  </ul>
+                  </div>
+                  <div id="content" class="emoji">
+                  <span>🥳</span>
+                  <span>🎉</span>
+                  <span>🎂</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content-ct">
+        <h2 class="section-title">O kursu</h2>
+        <div style="display: flex; max-width: 1200px; margin: 0 auto; gap: 2em;">
+            <div style="flex: 1; text-align: left;">
+                <p>Veštačka inteligencija može uštedeti mnogo vremena i novca vama i vašoj kompaniji - ako znate kako da je koristite. Na ovom sveobuhvatnom AI treningu pokazaćemo vam kako najnoviji AI alati mogu pomoći u vašem radu - bez obzira da li se bavite kodiranjem, marketingom ili upravljanjem projektima.</p>
+            </div>
+            <div style="flex: 1;">
+                <ul style="text-align: left;">
+                    <li>Datum početka: <strong>27. Februar</strong></li>
+                    <li>Trajanje: <strong>6 sesija</strong></li>
+                    <li>Format: Uživo, online</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section content-ct" style="background: #f5f5f5;">
+      <div class="container">
+        <h2 class="section-title">Zašto izabrati naš kurs?</h2>
+        
+        <div class="row benefits">
+          <div class="col-md-3">
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fas fa-comments"></i>
+              </div>
+              <h3>Personalizovani feedback</h3>
+              <p>Direktna komunikacija sa predavačem</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3">
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h3>2 godine pristupa</h3>
+              <p>Pristup svim snimcima predavanja</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3">
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <h3>Sertifikat</h3>
+              <p>Po završetku kursa dobijate sertifikat</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3">
+            <div class="benefit-card">
+              <div class="benefit-icon">
+                <i class="fas fa-fire"></i>
+              </div>
+              <h3>Besplatan uvod</h3>
+              <p>Dođite na prvi čas potpuno besplatno, bez ikakvih obaveza</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+    <section class="content-ct">
+        <h2 class="section-title">Ko smo mi?</h2>
+        <div style="display: flex; max-width: 1210px; margin: 0 auto; gap: 2em;">
+        <div class="feature" style="max-width: 600px; margin: 0 auto;">
+            <img src="img/sevic.jfif" alt="Ivan Sevic" class="speaker-img">
+            <h2 style="margin-top: 10px;">Ivan Ševič</h2>
+            <h5><strong>Bsc na VTŠ Subotica</strong></h5>
+            <p>Ivan je master računarskih nauka sa Univerziteta u Segedinu, trenutno na doktorskim studijama. Član istraživačke grupe za veštačku inteligenciju, prethodno softverski inženjer. Fokusiran na softversko inženjerstvo i AI, sa posebnim interesovanjima u automatizovanoj popravci programa, embedingu izvornog koda i generisanju programa. Predaje na univerzitetu i ima iskustvo u međunarodnoj softverskoj kompaniji.</p>
+            <ul class="speaker-social">
+              <li><a href="https://www.facebook.com/s3vic.ivan"><span class="ti-facebook"></span></a></li>
+              <li><a href="https://www.linkedin.com/in/šević-ivan/"><span class="ti-linkedin"></span></a></li>
+            </ul>
+        </div>
+        <div class="feature" style="max-width: 600px; margin: 0 auto;">
+          <img src="img/cuvik.jfif" class="speaker-img">
+            <h2 style="margin-top: 10px;">Viktor Čuvik</h2>
+            <h5><strong>PhD na Univerzit u Segedinu</strong></h5>
+            <p>Viktor je master računarskih nauka sa Univerziteta u Segedinu, trenutno na doktorskim studijama. Član istraživačke grupe za veštačku inteligenciju, prethodno softverski inženjer. Fokusiran na softversko inženjerstvo i AI, sa posebnim interesovanjima u automatizovanoj popravci programa, embedingu izvornog koda i generisanju programa. Predaje na univerzitetu i ima iskustvo u međunarodnoj softverskoj kompaniji.</p>
+            <ul class="speaker-social">
+              <li><a href="https://scholar.google.com/citations?user=1Rxmr0cAAAAJ&hl=hu"><span class="ti-google"></span></a></li>
+              <li><a href="https://www.linkedin.com/in/viktor-csuvik-b03800118/"><span class="ti-linkedin"></span></a></li>
+            </ul>
+          </div>
+      </div>
+    </section>
+
+    <section class="content-ct" style="background: #f5f5f5;">
+      <h2 class="section-title">Kome je namenjen kurs?</h2>
+      <div style="display: flex; max-width: 1200px; margin: 0 auto; gap: 2em;">
+          <div class="feature" style="background-color: #3a3a3a; color: white">
+              <h3>Preduzetnicima i menadžerima</h3>
+              <p>Naučite kako da unapredite poslovne procese pomoću AI alata i izmerite ROI vaših AI investicija.</p>
+          </div>
+          <div class="feature" style="background-color: white; color: black">
+              <h3>Kreativcima</h3>
+              <p>Otkrijte kako da integrišete generativni AI u svoje kreativne procese i poboljšate kvalitet kroz prave promptove.</p>
+          </div>
+          <div class="feature" style="background-color: #1cbbb4; color: white">
+              <h3>Programerima</h3>
+              <p>Savladajte tehničke izazove integracije AI alata u postojeće sisteme za optimalnu skalabilnost.</p>
+          </div>
+      </div>
+  </section>
+
+    <section class="section content-ct">
+      <div class="container">
+        <h2 class="section-title">Šta možete očekivati na kursu?</h2>
+        
+        <div class="row expectations">
+          <div class="col-md-3">
+            <div class="expectation-card">
+              <div class="card-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h3>AI alati</h3>
+              <p>Upoznaćete ne samo kako AI funkcioniše i kako da prilagodite GenAI, već i sveobuhvatan pregled prednosti i nedostataka ChatGPT-a, Copilot-a i drugi alati.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3">
+            <div class="expectation-card">
+              <div class="card-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3>Strategija</h3>
+              <p>Naučićete kako da implementirate veštačku inteligenciju u poslovne procese i individualne tokove rada i kako da razvijete dugoročnu AI strategiju.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3">
+            <div class="expectation-card">
+              <div class="card-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Zaštita podataka</h3>
+              <p>Stavljamo veliki naglasak na osnove zaštite podataka (GDPR, EU AI Act) i pripremamo vas za rukovanje etičkim pitanjima vezanim za AI.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-3">
+            <div class="expectation-card">
+              <div class="card-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3>Praksa</h3>
+              <p>Uz prezentaciju najnovijih AI tehnologija, produbićete novo znanje kroz studije slučaja i praktične zadatke.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="registracija" class="section content-ct" >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="registration-form">
+              <h2 class="section-title">Registracija</h2>
+              <form id="registration-form" role="form" method="POST" action="/freeRegister">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="name" placeholder="Ime i prezime *" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" placeholder="Email adresa *" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" pattern="06[0-5]{1}.*" class="form-control" name="phone" placeholder="Broj telefona">
+                  </div>
+                <div class="form-group">
+                  <select class="form-control" name="lica" required>
+                    <option value="" disabled selected>Izaberite paket</option>
+                    <option value="fizickaLica">Fizička lica</option>
+                    <option value="pravnaLica">Pravna lica</option>
+                  </select>
+                </div>
+                <div class="form-check" style="margin-bottom: 0;">
+                  <input type="checkbox" class="form-check-input" id="terms" required>
+                  <label class="form-check-label" for="terms">*Prihvatam uslove korišćenja</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="newsletter">
+                  <label class="form-check-label" for="newsletter">Želim da primam newsletter</label>
+                </div>
+                <button type="submit" class="btn meetup-btn meetup-btn-lg">Registruj se</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/navbar-fix.js"></script>
+  <script src="js/custom.js"></script>
+
+    <script>
+    // Countdown timer
+    function updateCountdown() {
+        const endDate = new Date('2025-02-27T00:00:00').getTime();
+        const now = new Date().getTime();
+        const distance = endDate - now;
+    
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+        document.getElementById('days').textContent = String(days).padStart(2, '0');
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    }
+    
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+    </script>
+  
+    
+  <footer class="footer_section">
+    <div class="container">
+      <div class="footer_content">
+        <div class="footer_contact">
+          <h3>Contact Us</h3>
+		  <img src="../images/transparent_logo.png" alt="" style="filter: brightness(0) invert(1); height: 120px; float: left;" />
+          <p><i class="location-icon"></i>Serbia, Ada</p>
+          <p><i class="email-icon"></i>hello@malilabs.com</p>
+        </div>
+        
+        <div class="footer_social">
+          <h3>Connect With Us</h3>
+          <div class="social_links">
+            <a href="#" class="linkedin">LinkedIn</a>
+            <a href="#" class="github">GitHub</a>
+            <a href="#" class="twitter">Twitter</a>
+          </div>
+        </div>
+        
+        <div class="footer_cta">
+          <h3>Ready to get started?</h3>
+          <a href="https://calendly.com/csuvikv-malilabs" class="cta_button">Schedule a Call</a>
+        </div>
+      </div>
+      
+      <div class="footer_bottom">
+        <p>&copy; 2024 MALI Labs. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+    </body>
+    </html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>MALI Labs | Contact</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+
+
+
+
+
+
+ 
+
+
+
+    .hero_area {
+        background-color: #f8f9fa;
+        padding: 20px 0;
+    }
+    .contact_section {
+        padding: 80px 0;
+        background-color: white;
+    }
+    .heading_container h2 {
+        color: #2c3e50;
+        font-weight: 700;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    .heading_container h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: #3498db;
+    }
+    .contact-form {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+    .contact-info-box {
+        background: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+        height: 100%;
+    }
+    .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .info-item svg {
+        width: 24px;
+        height: 24px;
+        margin-right: 15px;
+        color: #3498db;
+    }
+    .btn-submit {
+        background-color: #3498db;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 5px;
+        transition: all 0.3s;
+    }
+    .btn-submit:hover {
+        background-color: #2980b9;
+    }
+    .project-type-card {
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .project-type-card:hover {
+        border-color: #3498db;
+        transform: translateY(-5px);
+    }
+    .project-type-card.selected {
+        border-color: #3498db;
+        background-color: #f8f9fa;
+    }
+    textarea {
+        min-height: 150px;
+    }
+</style>
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="index.html">
+              <img src="images/transparent_logo_small.png" alt="" style="filter: brightness(0) invert(1);" />
+              <span>
+                MALI Labs
+              </span>
+              
+            </a>
+            <span class="message">
+              Unlocking the Power of Code and AI
+            </span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="work.html">Work </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html"> Contact </a>
+                </li>
+                      <li class="nav-item" >
+                  <a class="nav-link" href="./courses/index.html"> Courses </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div class="custom_menu-btn ">
+                <button>
+                  <span class=" s-1"></span>
+                  <span class="s-2"></span>
+                  <span class="s-3"></span>
+                </button>
+              </div>
+            </div>
+  
+          </nav>
+        </div>
+
+       
+        
+      </header>
+    <!-- end header section -->
+  </div>
+
+  <section class="contact_section">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-10 text-center">
+                <div class="heading_container d-flex justify-content-center">
+                    <h2>Let's Bring Your Project to Life</h2>
+                </div>
+                <p class="text-muted">Share your vision with us, and we'll help you transform it into reality. Whether you're looking to integrate AI, develop custom software, or need technical training, we're here to help.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-7 mb-4 mb-md-0">
+                <div class="contact-form">
+                    <!-- <form id="projectForm" > -->
+                    <form id="projectForm" action="/submitProject" method="POST">
+                        <input type="hidden" id="projectType" name="projectType" value="">
+                        <div class="mb-4">
+                            <h5>What type of project are you interested in?</h5>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="project-type-card">
+                                        <h6 class="mb-2">AI Integration</h6>
+                                        <small class="text-muted">Machine learning, NLP, computer vision solutions</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="project-type-card">
+                                        <h6 class="mb-2">Software Development</h6>
+                                        <small class="text-muted">Web, mobile, or desktop applications</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="project-type-card">
+                                        <h6 class="mb-2">Technical Training</h6>
+                                        <small class="text-muted">Workshops, courses, team training</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="project-type-card">
+                                        <h6 class="mb-2">Consulting</h6>
+                                        <small class="text-muted">Technical advice and strategy</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <!-- <input type="text" class="form-control" id="name" required> -->
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="company" class="form-label">Company Name</label>
+                                    <!-- <input type="text" class="form-control" id="company"> -->
+                                    <input type="text" class="form-control" id="company" name="company">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <!-- <input type="email" class="form-control" id="email" required> -->
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <!-- <input type="tel" class="form-control" id="phone"> -->
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="projectDescription" class="form-label">Tell us about your project</label>
+                            <!-- <textarea class="form-control" id="projectDescription" rows="5" placeholder="Please describe your project, goals, and any specific requirements you may have." required></textarea> -->
+                            <textarea class="form-control" id="projectDescription" name="projectDescription" rows="5" placeholder="Please describe your project, goals, and any specific requirements you may have."  required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="budget" class="form-label">Estimated Budget</label>
+                             <select class="form-select" id="budget" name="budget"> <!--name="budget" ezt adtuk hozza a regihez  -->
+                                <option value="">Select budget range</option>
+                                <option value="< $10k">Less than $10,000</option>
+                                <option value="$10k-$25k">$10,000 - $25,000</option>
+                                <option value="$25k-$50k">$25,000 - $50,000</option>
+                                <option value="$50k+">$50,000+</option>
+                                <option value="Not Sure">Not sure yet</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Submit Project Request</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="contact-info-box">
+                    <h4 class="mb-4">How We Can Help</h4>
+                    
+                    <div class="info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                        <div>
+                            <h6 class="mb-1">Free Initial Consultation</h6>
+                            <p class="text-muted mb-0">We'll discuss your project and provide initial recommendations</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
+                            <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+                        </svg>
+                        <div>
+                            <h6 class="mb-1">Custom Solution Design</h6>
+                            <p class="text-muted mb-0">Tailored proposals based on your specific needs</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <div>
+                            <h6 class="mb-1">Quick Response Time</h6>
+                            <p class="text-muted mb-0">We'll respond to your inquiry within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <h5 class="mb-3">Contact Information</h5>
+                    <div class="info-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <div>
+                            <a href="mailto:contact@yourcompany.com" class="text-decoration-none text-muted">hello@malilabs.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script>
+document.querySelectorAll('.project-type-card').forEach(card => {
+    card.addEventListener('click', () => {
+        document.querySelectorAll('.project-type-card').forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+    });
+});
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.project-type-card').forEach(card => {
+            card.addEventListener('click', () => {
+                document.querySelectorAll('.project-type-card').forEach(c => c.classList.remove('selected'));
+                card.classList.add('selected');
+                document.getElementById('projectType').value = card.querySelector('h6').textContent;
+            });
+        });
+    });
+    </script>
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="footer_content">
+        <div class="footer_contact">
+          <h3>Contact Us</h3>
+          <img src="images/transparent_logo.png" alt="" style="filter: brightness(0) invert(1); height: 120px; float: left;" class="footer-logo"  />
+          <p><i class="location-icon"></i>Serbia, Ada</p>
+          <p><i class="email-icon"></i>hello@malilabs.com</p>
+        </div>
+        
+        <div class="footer_social">
+          <h3>Connect With Us</h3>
+          <div class="social_links">
+            <a href="#" class="linkedin">LinkedIn</a>
+            <a href="#" class="github">GitHub</a>
+            <a href="#" class="twitter">Twitter</a>
+          </div>
+        </div>
+        
+        <div class="footer_cta">
+          <h3>Ready to get started?</h3>
+          <a href="https://calendly.com/csuvikv-malilabs" class="cta_button">Schedule a Call</a>
+        </div>
+      </div>
+      
+      <div class="footer_bottom">
+        <p>&copy; 2024 MALI Labs. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- end  footer section -->
+
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/custom.js"></script>
+
+</body>
+</body>
+
+</html>
